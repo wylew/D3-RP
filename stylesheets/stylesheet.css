@@ -1,6 +1,23 @@
 * {
   box-sizing: border-box; }
 
+nav {
+  position:fixed;
+  top:0;
+  right:0;
+  z-index:99;
+  width:100%;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+nav ul {
+  display:block;
+  padding:0;
+  display:flex;
+  list-style:none;
+}
+
 body {
   padding: 0;
   margin: 0;
