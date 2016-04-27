@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>NadekoBot - Commandslist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-menu">
+    <nav>
+      <ul>
+        <li>
+            <a href="index.html">Home</a>
+          </li>
+        <li>
+          <a href="about.html">About</a>
+          </li>
+        <li>
+          <a href="#">Commands</a>
+          </li>
+        <li>
+          <a href="setup.html">Setup Guide
+          </a></li>
+        <li>
+          <a href="sourcesetup.html">
+          Setting up from source
+          </a></li>
+      </ul>
+    </nav>  
+      
+    </section>
+    
+    <section class="page-header">
+      <a style="color:white;text-decoration:none" href="index.html">
+      <h1 class="project-name">NadekoBot - Commandslist</h1>
+      </a>
+      <h2 class="project-tagline">The list of commands NadekoBot can use at the moment</h2>
+      <a href="https://github.com/appelemac/NadekoBot" class="btn">View on GitHub</a>
+      <a href="https://discordapp.com/oauth2/authorize?client_id=170254782546575360&amp;scope=bot&amp;permissions=66186303" class="btn">Invite to your server</a>
+      <a href="https://discord.gg/0ehQwTK2RBjAxzEY" class="btn">Join Support Server</a>
+    </section>
+    
+    <h3 id="permissions">Permissions</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>;cfi</code>, <code>;channelfilterinvites</code></td>
+<td align="left">Enables or disables automatic deleting of invites on the channel.If no channel supplied, it will default to current one. Use ALL to apply to all existing channels at once.</td>
+<td align="left">;cfi enable #general-chat</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;sfi</code>, <code>;serverfilterinvites</code></td>
+<td align="left">Enables or disables automatic deleting of invites on the server.</td>
+<td align="left">;sfi disable</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;cfw</code>, <code>;channelfilterwords</code></td>
+<td align="left">Enables or disables automatic deleting of messages containing banned words on the channel.If no channel supplied, it will default to current one. Use ALL to apply to all existing channels at once.</td>
+<td align="left">;cfi enable #general-chat</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;afw</code>, <code>;addfilteredword</code></td>
+<td align="left">Adds a new word to the list of filtered words</td>
+<td align="left">;aw poop</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;rfw</code>, <code>;removefilteredword</code></td>
+<td align="left">Removes the word from the list of filtered words</td>
+<td align="left">;rw poop</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;lfw</code>, <code>;listfilteredwords</code></td>
+<td align="left">Shows a list of filtered words</td>
+<td align="left">;lfw</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;sfw</code>, <code>;serverfilterwords</code></td>
+<td align="left">Enables or disables automatic deleting of messages containing forbidden words on the server.</td>
+<td align="left">;sfi disable</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;permrole</code>, <code>;pr</code></td>
+<td align="left">Sets a role which can change permissions. Or supply no parameters to find out the current one. Default one is 'Nadeko'.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;verbose</code>, <code>;v</code></td>
+<td align="left">Sets whether to show when a command/module is blocked.</td>
+<td align="left">;verbose true</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;serverperms</code>, <code>;sp</code></td>
+<td align="left">Shows banned permissions for this server.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;roleperms</code>, <code>;rp</code></td>
+<td align="left">Shows banned permissions for a certain role. No argument means for everyone.</td>
+<td align="left">;rp AwesomeRole</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;channelperms</code>, <code>;cp</code></td>
+<td align="left">Shows banned permissions for a certain channel. No argument means for this channel.</td>
+<td align="left">;cp #dev</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;userperms</code>, <code>;up</code></td>
+<td align="left">Shows banned permissions for a certain user. No argument means for yourself.</td>
+<td align="left">;up Kwoth</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;sm</code>, <code>;servermodule</code></td>
+<td align="left">Sets a module's permission at the server level.</td>
+<td align="left">;sm [module_name] enable</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;sc</code>, <code>;servercommand</code></td>
+<td align="left">Sets a command's permission at the server level.</td>
+<td align="left">;sc [command_name] disable</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;rm</code>, <code>;rolemodule</code></td>
+<td align="left">Sets a module's permission at the role level.</td>
+<td align="left">;rm [module_name] enable [role_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;rc</code>, <code>;rolecommand</code></td>
+<td align="left">Sets a command's permission at the role level.</td>
+<td align="left">;rc [command_name] disable [role_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;cm</code>, <code>;channelmodule</code></td>
+<td align="left">Sets a module's permission at the channel level.</td>
+<td align="left">;cm [module_name] enable [channel_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;cc</code>, <code>;channelcommand</code></td>
+<td align="left">Sets a command's permission at the channel level.</td>
+<td align="left">;cc [command_name] enable [channel_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;um</code>, <code>;usermodule</code></td>
+<td align="left">Sets a module's permission at the user level.</td>
+<td align="left">;um [module_name] enable [user_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;uc</code>, <code>;usercommand</code></td>
+<td align="left">Sets a command's permission at the user level.</td>
+<td align="left">;uc [command_name] enable [user_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;asm</code>, <code>;allservermodules</code></td>
+<td align="left">Sets permissions for all modules at the server level.</td>
+<td align="left">;asm [enable/disable]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;asc</code>, <code>;allservercommands</code></td>
+<td align="left">Sets permissions for all commands from a certain module at the server level.</td>
+<td align="left">;asc [module_name] [enable/disable]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;acm</code>, <code>;allchannelmodules</code></td>
+<td align="left">Sets permissions for all modules at the channel level.</td>
+<td align="left">;acm [enable/disable] [channel_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;acc</code>, <code>;allchannelcommands</code></td>
+<td align="left">Sets permissions for all commands from a certain module at the channel level.</td>
+<td align="left">;acc [module_name] [enable/disable] [channel_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;arm</code>, <code>;allrolemodules</code></td>
+<td align="left">Sets permissions for all modules at the role level.</td>
+<td align="left">;arm [enable/disable] [role_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;arc</code>, <code>;allrolecommands</code></td>
+<td align="left">Sets permissions for all commands from a certain module at the role level.</td>
+<td align="left">;arc [module_name] [enable/disable] [role_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;ubl</code></td>
+<td align="left">Blacklists a mentioned user.</td>
+<td align="left">;ubl [user_mention]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;uubl</code></td>
+<td align="left">Unblacklists a mentioned user.</td>
+<td align="left">;uubl [user_mention]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;cbl</code></td>
+<td align="left">Blacklists a mentioned channel (#general for example).</td>
+<td align="left">;ubl [channel_mention]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>;cubl</code></td>
+<td align="left">Unblacklists a mentioned channel (#general for example).</td>
+<td align="left">;cubl [channel_mention]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>;sbl</code></td>
+<td align="left">Blacklists a server by a name or id (#general for example). <strong>BOT OWNER ONLY</strong></td>
+<td align="left">;usl [servername/serverid]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="conversations">Conversations</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>e</code></td>
+<td align="left">You did it. Or someone else!</td>
+</tr>
+<tr class="even">
+<td align="left"><code>comeatmebro</code></td>
+<td align="left">Come at me bro (ง’̀-‘́)ง</td>
+<td align="left">comeatmebro {target}</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>\o\</code></td>
+<td align="left">Nadeko replies with /o/</td>
+</tr>
+<tr class="even">
+<td align="left"><code>/o/</code></td>
+<td align="left">Nadeko replies with <br /><code>moveto</code></td>
+<td align="left">Suggests moving the conversation.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>..</code></td>
+<td align="left">Adds a new quote with the specified name (single word) and message (no limit).</td>
+<td align="left">.. abc My message</td>
+</tr>
+<tr class="even">
+<td align="left"><code>...</code></td>
+<td align="left">Shows a random quote with a specified name.</td>
+<td align="left">.. abc</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName copyme</code>, <code>@BotName cm</code></td>
+<td align="left">Nadeko starts copying everything you say. Disable with cs</td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName cs</code>, <code>@BotName copystop</code></td>
+<td align="left">Nadeko stops copying you</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName req</code>, <code>@BotName request</code></td>
+<td align="left">Requests a feature for nadeko.</td>
+<td align="left"><span class="citation">@NadekoBot</span> req new_feature</td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName lr</code></td>
+<td align="left">PMs the user all current nadeko requests.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName dr</code></td>
+<td align="left">Deletes a request. <strong>Owner Only!</strong></td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName rr</code></td>
+<td align="left">Resolves a request. <strong>Owner Only!</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName uptime</code></td>
+<td align="left">Shows how long Nadeko has been running for.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName die</code></td>
+<td align="left">Works only for the owner. Shuts the bot down.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName do you love me</code></td>
+<td align="left">Replies with positive answer only to the bot owner.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName how are you</code>, <code>@BotName how are you?</code></td>
+<td align="left">Replies positive only if bot owner is online.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName insult</code></td>
+<td align="left">Insults <span class="citation">@X</span> person.</td>
+<td align="left"><span class="citation">@NadekoBot</span> insult <span class="citation">@X</span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>@BotName praise</code></td>
+<td align="left">Praises <span class="citation">@X</span> person.</td>
+<td align="left"><span class="citation">@NadekoBot</span> praise <span class="citation">@X</span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>@BotName pat</code></td>
+<td align="left">Pat someone ^_^ <code>@BotName cry</code> | Tell Nadeko to cry. You are a heartless monster if you use this command. <code>@BotName disguise</code> | Tell Nadeko to disguise herself. <code>@BotName are you real</code> | Useless. <code>@BotName are you there</code>, <code>@BotName !</code>, <code>@BotName ?</code> | Checks if Nadeko is operational. <code>@BotName draw</code> | Nadeko instructs you to type <span class="math"><em>d</em><em>r</em><em>a</em><em>w</em>.<em>G</em><em>a</em><em>m</em><em>b</em><em>l</em><em>i</em><em>n</em><em>g</em><em>f</em><em>u</em><em>n</em><em>c</em><em>t</em><em>i</em><em>o</em><em>n</em><em>s</em><em>s</em><em>t</em><em>a</em><em>r</em><em>t</em><em>w</em><em>i</em><em>t</em><em>h</em></span> <code>@BotName fire</code> | Shows a unicode fire message. Optional parameter [x] tells her how many times to repeat the fire. | <span class="citation">@NadekoBot</span> fire [x] <code>@BotName rip</code> | Shows a grave image of someone with a start year | <span class="citation">@NadekoBot</span> rip <span class="citation">@Someone</span> 2000 <code>@BotName slm</code> | Shows the message where you were last mentioned in this channel (checks last 10k messages) <code>@BotName bb</code> | Says bye to someone. | <span class="citation">@NadekoBot</span> bb <span class="citation">@X</span> <code>@BotName call</code> | Useless. Writes calling <span class="citation">@X</span> to chat. | <span class="citation">@NadekoBot</span> call <span class="citation">@X</span> <code>@BotName hide</code> | Hides Nadeko in plain sight!11!! <code>@BotName unhide</code> | Unhides Nadeko in plain sight!1!!1 <code>@BotName dump</code> | Dumps all of the invites it can to dump.txt.** Owner Only.** <code>@BotName ab</code> | Try to get 'abalabahaha' <code>@BotName av</code>, <code>@BotName avatar</code> | Shows a mentioned person's avatar. | ~av <span class="citation">@X</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gambling">Gambling</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>$draw</code></td>
+<td align="left">Draws a card from the deck.If you supply number [x], she draws up to 5 cards from the deck.</td>
+<td align="left"><span class="math">$draw [x] `$</span>shuffle<code>,</code><span class="math">$sh`  |  Reshuffles all cards back into the deck. `$</span>flip<code>|  Flips coin(s) - heads or tails, and shows an image. |</code><span class="math">$flip` or `$</span>flip 3<code></code><span class="math">$roll`  |  Rolls 0-100. If you supply a number [x] it rolls up to 30 normal dice. If you split 2 numbers with letter d (xdy) it will roll x dice from 1 to y. |  $</span>roll or <span class="math"><em>r</em><em>o</em><em>l</em><em>l</em>7<em>o</em><em>r</em></span>roll 3d5</td>
+</tr>
+<tr class="even">
+<td align="left"><code>$nroll</code></td>
+<td align="left">Rolls in a given range.</td>
+<td align="left"><code>$nroll 5</code> (rolls 0-5) or <code>$nroll 5-15</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>$raffle</code></td>
+<td align="left">Prints a name and ID of a random user from the online list from the (optional) role.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>$$$</code></td>
+<td align="left">Check how much NadekoFlowers you have.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>$give</code></td>
+<td align="left">Give someone a certain amount of NadekoFlowers</td>
+</tr>
+<tr class="even">
+<td align="left"><code>$award</code></td>
+<td align="left">Gives someone a certain amount of flowers. <strong>Owner only!</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>$take</code></td>
+<td align="left">Takes a certain amount of flowers from someone. <strong>Owner only!</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="games">Games</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>&gt;t</code></td>
+<td align="left">Starts a game of trivia. You can add nohint to prevent hints.First player to get to 10 points wins. 30 seconds per question.</td>
+<td align="left"><code>&gt;t nohint</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;tl</code></td>
+<td align="left">Shows a current trivia leaderboard.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;tq</code></td>
+<td align="left">Quits current trivia after current question.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;typestart</code></td>
+<td align="left">Starts a typing contest.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;typestop</code></td>
+<td align="left">Stops a typing contest on the current channel.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;typeadd</code></td>
+<td align="left">Adds a new article to the typing contest. Owner only.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;poll</code></td>
+<td align="left">Creates a poll, only person who has manage server permission can do it.</td>
+<td align="left">&gt;poll Question?;Answer1;Answ 2;A_3</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;pollend</code></td>
+<td align="left">Stops active poll on this server and prints the results in this channel.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;pick</code></td>
+<td align="left">Picks a flower planted in this channel.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;plant</code></td>
+<td align="left">Spend a flower to plant it in this channel. (If bot is restarted or crashes, flower will be lost)</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;leet</code></td>
+<td align="left">Converts a text to leetspeak with 6 (1-6) severity levels</td>
+<td align="left">&gt;leet 3 Hello</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;choose</code></td>
+<td align="left">Chooses a thing from a list of things</td>
+<td align="left">&gt;choose Get up;Sleep;Sleep more</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;8ball</code></td>
+<td align="left">Ask the 8ball a yes/no question.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;rps</code></td>
+<td align="left">Play a game of rocket paperclip scissors with Nadeko.</td>
+<td align="left">&gt;rps scissors</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;linux</code></td>
+<td align="left">Prints a customizable Linux interjection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="music">Music</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>!m n</code>, <code>!m next</code>, <code>!m skip</code></td>
+<td align="left">Goes to the next song in the queue.</td>
+<td align="left"><code>!m n</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m s</code>, <code>!m stop</code></td>
+<td align="left">Stops the music and clears the playlist. Stays in the channel.</td>
+<td align="left"><code>!m s</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m d</code>, <code>!m destroy</code></td>
+<td align="left">Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour)</td>
+<td align="left"><code>!m d</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m p</code>, <code>!m pause</code></td>
+<td align="left">Pauses or Unpauses the song.</td>
+<td align="left"><code>!m p</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m q</code>, <code>!m yq</code></td>
+<td align="left">Queue a song using keywords or a link. Bot will join your voice channel.<strong>You must be in a voice channel</strong>.</td>
+<td align="left"><code>!m q Dream Of Venice</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m lq</code>, <code>!m ls</code>, <code>!m lp</code></td>
+<td align="left">Lists up to 15 currently queued songs.</td>
+<td align="left"><code>!m lq</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m np</code>, <code>!m playing</code></td>
+<td align="left">Shows the song currently playing.</td>
+<td align="left"><code>!m np</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m vol</code></td>
+<td align="left">Sets the music volume 0-100%</td>
+<td align="left"><code>!m vol 50</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m dv</code>, <code>!m defvol</code></td>
+<td align="left">Sets the default music volume when music playback is started (0-100). Does not persist through restarts.</td>
+<td align="left"><code>!m dv 80</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m min</code>, <code>!m mute</code></td>
+<td align="left">Sets the music volume to 0%</td>
+<td align="left"><code>!m min</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m max</code></td>
+<td align="left">Sets the music volume to 100% (real max is actually 150%).</td>
+<td align="left"><code>!m max</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m half</code></td>
+<td align="left">Sets the music volume to 50%.</td>
+<td align="left"><code>!m half</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m sh</code></td>
+<td align="left">Shuffles the current playlist.</td>
+<td align="left"><code>!m sh</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m pl</code></td>
+<td align="left">Queues up to 25 songs from a youtube playlist specified by a link, or keywords.</td>
+<td align="left"><code>!m pl playlist link or name</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m lopl</code></td>
+<td align="left">Queues up to 50 songs from a directory. <strong>Owner Only!</strong></td>
+<td align="left"><code>!m lopl C:/music/classical</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m radio</code>, <code>!m ra</code></td>
+<td align="left">Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf</td>
+<td align="left"><code>!m ra radio link here</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m lo</code></td>
+<td align="left">Queues a local file by specifying a full path. <strong>Owner Only!</strong></td>
+<td align="left"><code>!m ra C:/music/mysong.mp3</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m mv</code></td>
+<td align="left">Moves the bot to your voice channel. (works only if music is already playing)</td>
+<td align="left"><code>!m mv</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m rm</code></td>
+<td align="left">Remove a song by its # in the queue, or 'all' to remove whole queue.</td>
+<td align="left"><code>!m rm 5</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m cleanup</code></td>
+<td align="left">Cleans up hanging voice connections. <strong>Owner Only!</strong></td>
+<td align="left"><code>!m cleanup</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m rcs</code>, <code>!m repeatcurrentsong</code></td>
+<td align="left">Toggles repeat of current song.</td>
+<td align="left"><code>!m rcs</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m rpl</code>, <code>!m repeatplaylist</code></td>
+<td align="left">Toggles repeat of all songs in the queue (every song that finishes is added to the end of the queue).</td>
+<td align="left"><code>!m rpl</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m save</code></td>
+<td align="left">Saves a playlist under a certain name. Name must be no longer than 20 characters and mustn't contain dashes.</td>
+<td align="left"><code>!m save classical1</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>!m load</code></td>
+<td align="left">Loads a playlist under a certain name.</td>
+<td align="left"><code>!m load classical-1</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>!m goto</code></td>
+<td align="left">Goes to a specific time in seconds in a song.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="searches">Searches</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>~lolchamp</code></td>
+<td align="left">Shows League Of Legends champion statistics. If there are spaces/apostrophes or in the name - omit them. Optional second parameter is a role.</td>
+<td align="left">~lolchamp Riven or ~lolchamp Annie sup</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~lolban</code></td>
+<td align="left">Shows top 6 banned champions ordered by ban rate. Ban these champions and you will be Plat 5 in no time.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~hitbox</code>, <code>~hb</code></td>
+<td align="left">Notifies this channel when a certain user starts streaming.</td>
+<td align="left">~hitbox SomeStreamer</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~twitch</code>, <code>~tw</code></td>
+<td align="left">Notifies this channel when a certain user starts streaming.</td>
+<td align="left">~twitch SomeStreamer</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~beam</code>, <code>~bm</code></td>
+<td align="left">Notifies this channel when a certain user starts streaming.</td>
+<td align="left">~beam SomeStreamer</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~removestream</code>, <code>~rms</code></td>
+<td align="left">Removes notifications of a certain streamer on this channel.</td>
+<td align="left">~rms SomeGuy</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~liststreams</code>, <code>~ls</code></td>
+<td align="left">Lists all streams you are following on this server.</td>
+<td align="left">~ls</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~convert</code></td>
+<td align="left">Convert quantities from&gt;to. Like <code>~convert m&gt;km 1000</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~convertlist</code></td>
+<td align="left">List of the convertable dimensions and currencies.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~we</code></td>
+<td align="left">Shows weather data for a specified city and a country. BOTH ARE REQUIRED. Use country abbrevations.</td>
+<td align="left">~we Moscow RF</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~yt</code></td>
+<td align="left">Searches youtubes and shows the first result</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~ani</code>, <code>~anime</code>, <code>~aq</code></td>
+<td align="left">Queries anilist for an anime and shows the first result.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~imdb</code></td>
+<td align="left">Queries imdb for movies or series, show first result.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~mang</code>, <code>~manga</code>, <code>~mq</code></td>
+<td align="left">Queries anilist for a manga and shows the first result.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~randomcat</code></td>
+<td align="left">Shows a random cat image.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~i</code></td>
+<td align="left">Pulls the first image found using a search parameter. Use ~ir for different results.</td>
+<td align="left">~i cute kitten</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~ir</code></td>
+<td align="left">Pulls a random image using a search parameter.</td>
+<td align="left">~ir cute kitten</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~lmgtfy</code></td>
+<td align="left">Google something for an idiot.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~hs</code></td>
+<td align="left">Searches for a Hearthstone card and shows its image. Takes a while to complete.</td>
+<td align="left">~hs Ysera</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~osu</code></td>
+<td align="left">Shows osu stats for a player.</td>
+<td align="left">~osu Name</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~ud</code></td>
+<td align="left">Searches Urban Dictionary for a word.</td>
+<td align="left">~ud Pineapple</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~#</code></td>
+<td align="left">Searches Tagdef.com for a hashtag.</td>
+<td align="left">~# ff</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~quote</code></td>
+<td align="left">Shows a random quote.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~catfact</code></td>
+<td align="left">Shows a random catfact from <a href="http://catfacts-api.appspot.com/api/facts">http://catfacts-api.appspot.com/api/facts</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~yomama</code>, <code>~ym</code></td>
+<td align="left">Shows a random joke from <a href="http://api.yomomma.info/">http://api.yomomma.info/</a></td>
+</tr>
+<tr class="even">
+<td align="left"><code>~randjoke</code>, <code>~rj</code></td>
+<td align="left">Shows a random joke from <a href="http://tambal.azurewebsites.net/joke/random">http://tambal.azurewebsites.net/joke/random</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~chucknorris</code>, <code>~cn</code></td>
+<td align="left">Shows a random chucknorris joke from <a href="http://tambal.azurewebsites.net/joke/random">http://tambal.azurewebsites.net/joke/random</a></td>
+</tr>
+<tr class="even">
+<td align="left"><code>~mi</code>, <code>~magicitem</code></td>
+<td align="left">Shows a random magicitem from <a href="https://1d4chan.org/wiki/List_of_/tg/%27s_magic_items">https://1d4chan.org/wiki/List_of_/tg/%27s_magic_items</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~revav</code></td>
+<td align="left">Returns a google reverse image search for someone's avatar.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nsfw">NSFW</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>~hentai</code></td>
+<td align="left">Shows a random NSFW hentai image from gelbooru and danbooru with a given tag. Tag is optional but preffered. (multiple tags are appended with +)</td>
+<td align="left">~hentai yuri+kissing</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~danbooru</code></td>
+<td align="left">Shows a random hentai image from danbooru with a given tag. Tag is optional but preffered. (multiple tags are appended with +)</td>
+<td align="left">~danbooru yuri+kissing</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~gelbooru</code></td>
+<td align="left">Shows a random hentai image from gelbooru with a given tag. Tag is optional but preffered. (multiple tags are appended with +)</td>
+<td align="left">~gelbooru yuri+kissing</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~safebooru</code></td>
+<td align="left">Shows a random image from safebooru with a given tag. Tag is optional but preffered. (multiple tags are appended with +)</td>
+<td align="left">~safebooru yuri+kissing</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~rule34</code></td>
+<td align="left">Shows a random image from rule34.xx with a given tag. Tag is optional but preffered. (multiple tags are appended with +)</td>
+<td align="left">~gelbooru yuri+kissing</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~e621</code></td>
+<td align="left">Shows a random hentai image from e621.net with a given tag. Tag is optional but preffered. Use spaces for multiple tags.</td>
+<td align="left">~e621 yuri+kissing</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~cp</code></td>
+<td align="left">We all know where this will lead you to.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~boobs</code></td>
+<td align="left">Real adult content.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>~butts</code>, <code>~ass</code>, <code>~butt</code></td>
+<td align="left">Real adult content.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clashofclans">ClashOfClans</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>,createwar</code>, <code>,cw</code></td>
+<td align="left">Creates a new war by specifying a size (&gt;10 and multiple of 5) and enemy clan name.</td>
+<td align="left">,cw 15 The Enemy Clan</td>
+</tr>
+<tr class="even">
+<td align="left"><code>,sw</code>, <code>,startwar</code></td>
+<td align="left">Starts a war with a given number.</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>,listwar</code>, <code>,lw</code></td>
+<td align="left">Shows the active war claims by a number. Shows all wars in a short way if no number is specified.</td>
+<td align="left">,lw [war_number] or ,lw</td>
+</tr>
+<tr class="even">
+<td align="left"><code>,claim</code>, <code>,call</code>, <code>,c</code></td>
+<td align="left">Claims a certain base from a certain war. You can supply a name in the third optional argument to claim in someone else's place.</td>
+<td align="left">,call [war_number] [base_number] [optional_other_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>,cf</code>, <code>,claimfinish</code></td>
+<td align="left">Finish your claim if you destroyed a base. Optional second argument finishes for someone else.</td>
+<td align="left">,cf [war_number] [optional_other_name]</td>
+</tr>
+<tr class="even">
+<td align="left"><code>,unclaim</code>, <code>,uncall</code>, <code>,uc</code></td>
+<td align="left">Removes your claim from a certain war. Optional second argument denotes a person in whos place to unclaim</td>
+<td align="left">,uc [war_number] [optional_other_name]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>,endwar</code>, <code>,ew</code></td>
+<td align="left">Ends the war with a given index.</td>
+<td align="left">,ew [war_number]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pokegame">Pokegame</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>&gt;attack</code></td>
+<td align="left">Attacks a target with the given move</td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;ml</code>, <code>movelist</code></td>
+<td align="left">Lists the moves you are able to use</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;heal</code></td>
+<td align="left">Heals someone. Revives those that fainted. Costs a NadekoFlower</td>
+<td align="left">&gt;revive <span class="citation">@someone</span></td>
+</tr>
+<tr class="even">
+<td align="left"><code>&gt;type</code></td>
+<td align="left">Get the poketype of the target.</td>
+<td align="left">&gt;type <span class="citation">@someone</span></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&gt;settype</code></td>
+<td align="left">Set your poketype. Costs a NadekoFlower.</td>
+<td align="left">&gt;settype fire</td>
+</tr>
+</tbody>
+</table>
+<h3 id="translator">Translator</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>~trans</code>, <code>~translate</code></td>
+<td align="left">Translates from&gt;to text. From the given language to the destiation language.</td>
+<td align="left">~trans en&gt;fr Hello</td>
+</tr>
+<tr class="even">
+<td align="left"><code>~translangs</code></td>
+<td align="left">List the valid languages for translation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trello">Trello</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Command and aliases</th>
+<th align="left">Description</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>trello  join</code>, <code>trello  j</code></td>
+<td align="left">Joins a server</td>
+</tr>
+<tr class="even">
+<td align="left"><code>trello  bind</code></td>
+<td align="left">Bind a trello bot to a single channel. You will receive notifications from your board when something is added or edited.</td>
+<td align="left">bind [board_id]</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>trello  unbind</code></td>
+<td align="left">Unbinds a bot from the channel and board.</td>
+</tr>
+<tr class="even">
+<td align="left"><code>trello  lists</code>, <code>trello  list</code></td>
+<td align="left">Lists all lists yo ;)</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>trello  cards</code></td>
+<td align="left">Lists all cards from the supplied list. You can supply either a name or an index.</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
