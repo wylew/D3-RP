@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>NadekoBot - Dragon&#39;s fork! by appelemac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-menu">
+    <nav>
+      <ul>
+        <li>
+            <a href="#">Home</a>
+          </li>
+        <li>
+          <a href="about.html">About</a>
+          </li>
+        <li>
+          <a href="commands.html">Commands</a>
+          </li>
+        <li>
+          <a href="setup.html">Setup Guide
+          </a></li>
+        <li>
+          <a href="sourcesetup.html">
+          Setting up from source
+          </a></li>
+      </ul>
+    </nav>  
+      
+    </section>
+    <section class="page-header">
+      <a style="color:white;text-decoration:none" href="index.html">
+      <h1 class="project-name">NadekoBot - Dragon&#39;s fork!</h1>
+      </a>
+      <h2 class="project-tagline">NadekoBot is a Discord chatbot</h2>
+      <a href="https://github.com/appelemac/NadekoBot" class="btn">View on GitHub</a>
+      <a href="https://discordapp.com/oauth2/authorize?client_id=170254782546575360&amp;scope=bot&amp;permissions=66186303" class="btn">Invite to your server</a>
+      <a href="https://discord.gg/0ehQwTK2RBjAxzEY" class="btn">Join Support Server</a>
+    </section>
+
+    <section class="main-content">
+<hr>
+<p><em>Thanks to @Flatbread for making this guide</em></p>
+<hr>
+<h4><a id="Setting_Up_NadekoBot_v0932_4"></a>Setting Up NadekoBot v0.93.2</h4>
+<h6><a id="Prerequisites_5"></a>Prerequisites:</h6>
+<ol>
+<li>NET Framework 4.5.2 (or 4.6)</li>
+</ol>
+<ul>
+<li>Download nadeko using updater <a href="https://github.com/Kwoth/NadekoUpdater/releases/tag/v1.0">https://github.com/Kwoth/NadekoUpdater/releases/tag/v1.0</a></li>
+<li>Rename credentials_example.json into credentials.json. (Note: If you do not see a .json after credentials_example.json, do not add the .json. You likely have “Hide file extensions” as enabled.)</li>
+<li>Go to (<a href="https://discordapp.com/developers/applications/me">https://discordapp.com/developers/applications/me</a>). Log in if you have to with your Discord account. Press “New Application” and fill out an App Name and, optionally, an app description and icon. Afterwards, create the application. Once the application is created, click on “Create a Bot User” and confirm it. You will then see the bot’s username, ID and token. Reveal and copy the token and the bot ID.</li>
+<li>Open up credentials.json. Paste the token into the Token field, between the quotes. Paste the ID into the BotID field. Leave email and password fields empty. Save and close credentials.json.</li>
+<li>Go into data folder and make sure you have config.json file. If there is no config.json, rename the config_example.json to config.json.</li>
+<li>Copy your CLIENT ID (that’s in the same Developer page where you brought your token) and replace <code>12345678</code> in the this link:
+<a href="https://discordapp.com/oauth2/authorize?client_id=12345678&amp;scope=bot&amp;permissions=66186303">https://discordapp.com/oauth2/authorize?client_id=12345678&amp;scope=bot&amp;permissions=66186303</a> with it. Go to that link and you will be able to add your bot to your server.</li>
+<li>Start NadekoBot.exe. In a text channel, <strong>not a direct message</strong>, type in [.uid @______] without the brackets, filling in the underlined portion with your name and send the message. Your bot will reply with a number; this is your ID. Copy this ID and close NadekoBot.exe.</li>
+<li>Reopen credentials.json. Paste your ID into the square brackets (“OwnerIds”: [1231312313]). You can add multiple owners by separating IDs with a comma. Close and save credentials.json.</li>
+</ul>
+<hr>
+<h4><a id="Setting_Up_NadekoBot_For_Music_20"></a>Setting Up NadekoBot For Music</h4>
+<h6><a id="Prerequisites_21"></a>Prerequisites:</h6>
+<ol>
+<li>FFMPEG, Static Build Version (See below) Google Account</li>
+<li>Soundcloud Account (if you want soundcloud support)</li>
+</ol>
+<ul>
+<li>Download FFMPEG through the link (<a href="https://ffmpeg.zeranoe.com/builds/">https://ffmpeg.zeranoe.com/builds/</a>).</li>
+<li>Go to My Computer, right click and select Properties. On the left tab, select Advanced System Settings. Under the Advanced tab, select Environmental Variables near the bottom. One of the variables should be called “Path”. Add a semi-colon (;) to the end followed by your FFMPEG’s <strong>bin</strong> install location (<strong>for example C:\ffmpeg\bin</strong>). Save and close.</li>
+<li>Go to <a href="http://console.developers.google.com">console.developers.google.com</a> and log in.</li>
+<li>Create a new project (name does not matter). Once the project is created, go into “Enable and manage APIs.”</li>
+<li>Under the “Other Popular APIs” section, enable “URL Shortener API”. Under the “YouTube APIs” section, enable “YouTube Data API”.</li>
+<li>On the left tab, access Credentials. There will be a line saying “If you wish to skip this step and create an API key, client ID or service account.” Click on API Key, and then Server Key in the new window that appears. Enter in a name for the server key. A new window will appear with your Google API key. Copy the key.</li>
+<li>Open up credentials.json. For “GoogleAPIKey”, fill in with the new key.</li>
+<li>Go to (<a href="https://soundcloud.com/you/apps/new">https://soundcloud.com/you/apps/new</a>). Enter a name for the app and create it. You will see a page with the title of your app, and a field labeled Client ID. Copy the ID. In credentials.json, fill in “SoundcloudClientID” with the copied ID.</li>
+</ul>
+<hr>
+<h4><a id="Setting_Up_NadekoBot_Permissions_35"></a>Setting Up NadekoBot Permissions</h4>
+<h6><a id="NadekoBots_permissions_can_be_set_up_to_be_very_specific_through_commands_in_the_Permissions_module_36"></a>NadekoBot’s permissions can be set up to be very specific through commands in the Permissions module.</h6>
+<p>Each command or module can be turned on or off at:</p>
+<ul>
+<li>a user level (so specific users can or cannot use a command/module)</li>
+<li>a role level (so only certain roles have access to certain commands/module)</li>
+<li>a channel level (so certain commands can be limited to certain channels, which can prevent music / trivia / NSFW spam in serious channels)</li>
+<li>a server level.</li>
+</ul>
+<p>Use .modules to see a list of modules (sets of commands).
+Use .commands [module_name] to see a list of commands in a certain module.</p>
+<p>Permissions use a semicolon as the prefix, so always start the command with a ;.</p>
+<p>Follow the semicolon with the letter of the level which you want to edit.</p>
+<ul>
+<li>“u” for Users.</li>
+<li>“r” for Roles.</li>
+<li>“c” for Channels.</li>
+<li>“s” for Servers.</li>
+</ul>
+<p>Follow the level with whether you want to edit the permissions of a command or a module.</p>
+<ul>
+<li>“c” for Command.</li>
+<li>“m” for Module.</li>
+</ul>
+<p>Follow with a space and then the command or module name (surround the command with quotation marks if there is a space within the command, for example “!m q” or “!m n”).</p>
+<p>Follow that with another space and, to enable it, type one of the following: [1, true, t, enable], or to disable it, one of the following: [0, false, f, disable].</p>
+<p>Follow that with another space and the name of the user, role, channel. (depending on the first letter you picked)</p>
+<h6><a id="Examples_64"></a>Examples</h6>
+<ul>
+<li><strong>;rm NSFW 0 [Role_Name]</strong>  Disables the NSFW module for the role, &lt;Role_Name&gt;.</li>
+<li><strong>;cc “!m n” 0 [Channel_Name]</strong>  Disables skipping to the next song in the channel, &lt;Channel_Name&gt;.</li>
+<li><strong>;uc “!m q” 1 [User_Name]</strong>  Enables queuing of songs for the user, &lt;User_Name&gt;.</li>
+<li><strong>;sm Gambling 0</strong>  Disables gambling in the server.</li>
+</ul>
+<p>Check permissions by using the letter of the level you want to check followed by a p, and then the name of the level in which you want to check. If there is no name, it will default to yourself for users, the @everyone role for roles, and the channel in which the command is sent for channels.</p>
+<h6><a id="Examples_72"></a>Examples</h6>
+<ul>
+<li>;cp [Channel_Name]</li>
+<li>;rp [Role_Name]</li>
+</ul>
+<p>Insert an <strong>a</strong> before the level to edit the permission for all commands / modules for all users / roles / channels / server.</p>
+<p>Reference the Help command (-h) for more Permissions related commands.</p>
+
+    </section>
+  </body>
+</html>
