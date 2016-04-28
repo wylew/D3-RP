@@ -11,7 +11,7 @@ input#donate-button {
 ul.topnav.responsive li form input#donate-button {
 	float:inherit;
 	position:inherit;
-	
+	height:40px;
 }
 ul.topnav {
 	list-style-type: none;
