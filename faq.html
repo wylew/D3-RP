@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>NadekoBot - The Discord Bot!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+	</head>
+	<body>
+		<section class="page-menu">
+			<nav>
+				<ul class="topnav">
+					<li>
+						<a href="index.html">NadekoBot</a>
+					</li>
+					<li>
+						<a href="commands.html">Commands List</a>
+					</li>
+					<li>
+						<a href="setup.html">Setup Guide</a>
+					</li>
+					<li>
+						<a href="sourcesetup.html">Source Setup</a>
+					</li>
+					<li>
+						<a class="active" href="#">FAQ</a>
+					</li>
+					<li>
+						<a href="about.html">Support Us</a>
+					</li>
+					<li class="donate">
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_donations">
+						<input type="hidden" name="business" value="nadekodiscordbot@gmail.com">
+						<input type="hidden" name="lc" value="RS">
+						<input type="hidden" name="item_name" value="NadekoBot">
+						<input type="hidden" name="no_note" value="0">
+						<input type="hidden" name="currency_code" value="EUR">
+						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHosted">
+						<input id="donate-button" type="image" src="donate-button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+					</form></li>
+					<li class="icon">
+						<a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+					</li>
+				</ul>
+			</nav>
+			<script>
+				function myFunction() {
+					document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+				}
+			</script>
+
+		</section>
+		<section class="page-header">
+			<a style="color:white;text-decoration:none" href="index.html"> <h1 class="project-name">NadekoBot</h1> </a>
+			<h2 class="project-tagline">A Discord chatbot</h2>
+			<a href="https://github.com/Kwoth/NadekoBot" class="btn">View on GitHub</a>
+			<a href="https://discordapp.com/oauth2/authorize?client_id=170254782546575360&amp;scope=bot&amp;permissions=66186303" class="btn">Invite to your server</a>
+			<a href="https://discord.gg/0ehQwTK2RBjAxzEY" class="btn">Join Support Server</a>
+		</section>
+
+<section class="main-content">
+<p><h1>Frequently Asked Questions</h1>
+<h2>Q1: How do I get @Nadeko#6685 to join my server?</h2>
+<em>A: Send her a Direct Message with <code>-h</code> to get the link. Only Server Owners can allow the bot to join</em>
+<h2>Q3: How can I get this bot for myself?</h2>
+<em>A: Follow the instructions found on <a href="https://github.com/Kwoth/NadekoBot/blob/master/ComprehensiveGuide.md">https://github.com/Kwoth/NadekoBot/blob/master/ComprehensiveGuide.md</a></em>
+<h2>Q4: I want to change permissions, but it doesn’t work D</h2>:
+to change permissions, you have to first have or set the ;permsrole. Only the owner of the server can change permissions without having this role.*
+<h2>Q5: I want to disable NSFW on my server, please?</h2>
+<em>A: You would first have to be able to change permissions (see Q4 ), and then run ;sm NSFW disable</em>
+<h2>Q6: How do I get NadekoFlowers/whatever I changed my currency to?</h2>
+<em>A: You get NadekoFlowers by answering Triviaquestions, which you can then either plant (for more!) or spend on healing|setting your type in the Pokemon game, or give away.</em>
+<h2>Q7: I have an issue/bug/suggestion, where can I get it noticed?</h2>
+<em>A: First of all, check <a href="https://github.com/Kwoth/NadekoBot/issues">https://github.com/Kwoth/NadekoBot/issues</a> and #suggestions for your problem/improvement. If it’s not there, create a new issue on <a href="https://github.com/Kwoth/NadekoBot/issues">https://github.com/Kwoth/NadekoBot/issues</a>.</em>
+<h2>Q8: How do I use the command XXXX?</h2>
+<em>A: most commands have a description, with a usage guide if required; use -h command, like -h ;pr</em>
+<h2>Q9: Music doesn’t work!?</h2>
+<em>A: Music on @Nadeko#6685 will be re-enabled in the future, but for now your only option is to host yourself
+If you are hosting your own bot, make sure ffmpeg is working correctly; running ffmpeg in the commandline should have a response. see <a href="https://github.com/Kwoth/NadekoBot/blob/master/ComprehensiveGuide.md#setting-up-nadekobot-for-music">https://github.com/Kwoth/NadekoBot/blob/master/ComprehensiveGuide.md#setting-up-nadekobot-for-music</a> for more</em>
+<h2>Q10: My music is still not working/very laggy?</h2>
+<em>A: Try switching server location, try giving the bot permissions on the server you want to use it on.</em>
+<h2>Q11: I can’t play music :sob:</h2>
+A: At the moment, your only option is to host yourself*
+<h2>Q12: I want to change data in the database (like NadekoFlowers or the pokemontypes of users, but how?</h2>
+A: Open data/nadekobot.sqlite using sqlitebrowser (or some alternative), Browse Data, select relevant table, change data, Write changes
+<h2>Q13: The .greet and .bye commands doesn’t work, but everything else is</h2> (From @Kong 【Takoyaki】#0673)
+<em>A: Set a greeting message by using <code>.greetmsg YourMessageHere</code>
+and a bye-message by using <code>.byemsg YourMessageHere</code></em>
+<h2>Q14: I want to convert my bot to a bot account, but how?</h2>
+DO NOT DO THIS WITH YOUR OWN ACCOUNT, YOU CAN’T ACCESS THE ACCOUNT AFTER DOING THIS
+<em>A: The official way is here: <a href="https://discordapp.com/developers/docs/topics/oauth2#convert-account">https://discordapp.com/developers/docs/topics/oauth2#convert-account</a>
+When it asks for YOUR TOKEN,the token meant is the one from the current non-bot-tag user. You can find using steps 5-9 of this tutorial: <a href="https://github.com/DoNotSpamPls/repository/wiki/How-to-convert-your-bot-account-in-the-API">https://github.com/DoNotSpamPls/repository/wiki/How-to-convert-your-bot-account-in-the-API</a> (You can also choose to follow that tutorial in full</em>
+<h2>Q15: How to import certs on linux?</h2> (From @Kwoth#2560)
+<em>A:
+mozroots --import --ask-remove --machine
+certmgr --ssl <a href="https://gateway.discord.gg">https://gateway.discord.gg</a></em>
+<h2>Q16: I want “BOT” tag with my bot and I can’t follow up with Q14, is there a simple way?</h2>  (From @samvaio#5797)
+*A: Yes, you can create an application using your account and use the APP BOT USER TOKEN from here: <a href="https://discordapp.com/developers/applications/me">https://discordapp.com/developers/applications/me</a>
+NOTE: This will create a new bot account *
+<h2>Q17: I made an application following Q16, but I can’t add that new bot to my server, how do I invite it to my server?</h2> (From @samvaio#5797)
+*A: You need to use oauth link to add it to you server, just copy your CLIENT ID (that’s in the same Developer page where you brought your token) and replace 12345678 in the link below:
+<a href="https://discordapp.com/oauth2/authorize?client_id=12345678&amp;scope=bot&amp;permissions=66186303">https://discordapp.com/oauth2/authorize?client_id=12345678&amp;scope=bot&amp;permissions=66186303</a></p>
+<p>FOLLOW THIS DETAILED GUIDE IF IT IS HARD FOR YOU TO UNDERSTAND <a href="http://discord.kongslien.net/guide.html">http://discord.kongslien.net/guide.html</a>*
+<h2>Q18: I’m building NadekoBot from source, but I get hundreds of (namespace) errors without changing anything!?</h2>
+<em>A: Using Visual Studio, you can solve these errors by going to Tools -&gt; NuGet Package Manager -&gt; Manage NuGet Packages for Solution. Go to the Installed tab, select the Packages that were missing (usually Newtonsoft.json and RestSharp) and install them for all projects</em></p>
+</section>
+</body>
+</html>
