@@ -14,25 +14,22 @@
   <body>
     <section class="page-menu">
     <nav>
-      <ul>
-        <li>
-            <a href="#">Home</a>
-          </li>
-        <li>
-          <a href="about.html">About</a>
-          </li>
-        <li>
-          <a href="commands.html">Commands</a>
-          </li>
-        <li>
-          <a href="setup.html">Setup Guide
-          </a></li>
-        <li>
-          <a href="sourcesetup.html">
-          Setting up from source
-          </a></li>
-      </ul>
-    </nav>  
+<ul class="topnav">
+  <li><a class="active" href="#">NadekoBot</a></li>
+  <li><a href="commandlist.html">Commands List</a></li>
+  <li><a href="setup.html">Setup Guide</a></li>
+  <li><a href="setupsource.html">Source Setup</a></li>
+  <li><a href="about.html">Support</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  </li>
+</ul>
+</nav>
+<script>
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}
+</script>
       
     </section>
     <section class="page-header">
