@@ -8,7 +8,11 @@ input#donate-button {
     position: absolute;
     right: 0;
 }
-
+ul.topnav.responsive li form input#donate-button {
+	float:inherit;
+	position:inherit;
+	
+}
 ul.topnav {
 	list-style-type: none;
 	margin: 0;
