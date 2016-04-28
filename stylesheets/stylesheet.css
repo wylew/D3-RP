@@ -1,6 +1,12 @@
 * {
 	box-sizing: border-box;
 }
+
+input#donate-button {
+    height: 60px;
+    float: right;
+}
+
 ul.topnav {
 	list-style-type: none;
 	margin: 0;
