@@ -5,6 +5,8 @@
 input#donate-button {
     height: 60px;
     float: right;
+    position: absolute;
+    right: 0;
 }
 
 ul.topnav {
@@ -56,6 +58,9 @@ ul.topnav li.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
+	}
+	ul.topnav.responsive li.donate {
+		float:left !important;
 	}
 	ul.topnav.responsive li {
 		float: none;
