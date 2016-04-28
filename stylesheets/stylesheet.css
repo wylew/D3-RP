@@ -116,6 +116,11 @@ a:hover {
 
 @media screen and (min-width: 64em) {
 	.btn {
+		padding: 0.6 rem 0.9 rem;
+		padding-top: 0.6 rem;
+		padding-right: 0.9 rem;
+		padding-bottom: 0.6 rem;Ï
+		padding-left 0.9rem;
 		padding: 0.75 rem 1rem;
 	}
 }
